@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AsyncAwaitTest_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIc-iZ-MAC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="FIB-wQ-b0r"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JYM-Rz-eAw">
+                                <rect key="frame" x="0.0" y="400" width="414" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JYM-Rz-eAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Yb-lN-3on"/>
+                            <constraint firstItem="XIc-iZ-MAC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fgq-b5-Oqb"/>
+                            <constraint firstItem="XIc-iZ-MAC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KqV-0c-e4E"/>
+                            <constraint firstItem="XIc-iZ-MAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WVt-tM-GdC"/>
+                            <constraint firstItem="JYM-Rz-eAw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e5b-bi-4FE"/>
+                            <constraint firstItem="JYM-Rz-eAw" firstAttribute="top" secondItem="XIc-iZ-MAC" secondAttribute="bottom" id="oGo-co-Apn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="XIc-iZ-MAC" id="hLW-d8-L6U"/>
+                        <outlet property="progressView" destination="JYM-Rz-eAw" id="bBx-OY-Xs7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704.34782608695662" y="-52.232142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
