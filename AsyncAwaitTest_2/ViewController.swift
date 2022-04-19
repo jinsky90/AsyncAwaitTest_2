@@ -30,11 +30,11 @@ class ViewController: UIViewController {
 //            await requestImageDataBytes()
             
             // AsyncSequence + image with progress
-//            let image = await requestImageInProgress(1)
-//            imageView.image = image
+            let image = await requestImageInProgress(1)
+            imageView.image = image
             
             // AsyncSequence + Parallel
-            await requestImageParallel()
+//            await requestImageParallel()
         }
         
         print("메인 쓰레드 진행중 - 2")
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     // MARK: - Progress + image
     
     func requestImageInProgress(_ index: Int) async -> UIImage? {
-        let url = URL(string:"https://cdn.pixabay.com/photo/2016/08/12/22/38/apple-1589874_1280.jpg")!
+        let url = URL(string:"https://cdn.pixabay.com/photo/2014/09/05/10/54/mattress-camp-436263_1280.jpg")!
         do {
             let (asyncBytes, urlResponse) = try await URLSession.shared.bytes(from: url)
             let length = (urlResponse.expectedContentLength)
